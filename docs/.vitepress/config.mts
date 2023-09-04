@@ -32,7 +32,7 @@ export default defineConfig({
     ],
     algolia: {
       appId: "Q74OQRXAR7",
-      apiKey: "b55177f0f0f67886a5f49a222255b072",
+      apiKey: "eca77082cba7324afee4d6b0ed1acba7",
       indexName: "timeplus",
       // searchParameters: {
       //   facetFilters: ["tags:en"],
@@ -90,5 +90,8 @@ export default defineConfig({
       pattern: "https://github.com/chengzhongxue/halo-timeplus-editor/edit/main/:path",
       text: "Edit this page on GitHub",
     },
+  },
+  locales: {
+    root: { label: "简体中文", lang: "zh" },
   },
 })
