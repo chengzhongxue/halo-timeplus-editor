@@ -14,7 +14,7 @@ title: 主题简介
   <!-- 下载总数 -->
   <a href="https://github.com/chengzhongxue/halo-theme-timeplus/releases" style="margin:4px;"><img alt="下载总数" src="https://img.shields.io/github/downloads/chengzhongxue/halo-theme-timeplus/total.svg?style=flat-square"/></a>
   <!-- 许可协议 -->
-  <a href="./LICENSE" style="margin:4px;"><img alt="许可协议" src="https://img.shields.io/badge/license-MIT-yellow.svg"></a>
+  <a href="" style="margin:4px;"><img alt="许可协议" src="https://img.shields.io/badge/license-MIT-yellow.svg"></a>
 </p>
 </div>
 
@@ -59,7 +59,7 @@ title: 主题简介
 
 ## 🔐 许可
 
-[Halo-Theme-TimePlus](https://github.com/chengzhongxue/halo-theme-timeplus) 使用 [MIT](./LICENSE) 协议开源，请遵守开源协议。
+[Halo-Theme-TimePlus](https://github.com/chengzhongxue/halo-theme-timeplus) 使用 [MIT]() 协议开源，请遵守开源协议。
 
 ## ☕ 赞助
 
