@@ -6,7 +6,7 @@ title: 主题安装
 
 ## 🚗 自动安装
 
-1. 点击 [此链接](https://halo.run/store/apps/app-pqKNX) 进入 Halo 官方应用市场，找到本主题
+1. 点击 [此链接](https://halo.run/store/apps/app-ihpQC) 进入 Halo 官方应用市场，找到本主题
 2. 点击左下角 `下载` 按钮
 3. 弹出的对话框中，输入自己的网站地址，点击安装
 
