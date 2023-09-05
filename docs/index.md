@@ -16,6 +16,9 @@ hero:
     - theme: alt
       text: 简介
       link: /intro
+    - theme: alt
+      text: GitHub
+      link: https://github.com/chengzhongxue
   image:
     src: /img/logo.png
 
