@@ -1,7 +1,7 @@
 import { defineConfig } from 'vitepress'
 
 const ogDescription = "一款精美的 Halo2.x 图册主题";
-const ogImage = "https://docs.anheyu.com/cover.jpg";
+const ogImage = "https://0206.ink/upload/cf44650dc27ca55b28bb0f8d3e48a93.png";
 const ogTitle = "Halo-TimePlus主题";
 const ogUrl = "https://timeplus.yyds.pink";
 
