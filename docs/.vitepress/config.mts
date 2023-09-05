@@ -1,4 +1,6 @@
 import { defineConfig } from 'vitepress'
+import { localSearchOptions } from './config/local-search';
+import { tabsMarkdownPlugin } from "vitepress-plugin-tabs";
 
 const ogDescription = "一款精美的 Halo2.x 图册主题";
 const ogImage = "https://0206.ink/upload/cf44650dc27ca55b28bb0f8d3e48a93.png";
@@ -11,7 +13,7 @@ export default defineConfig({
   description: "一款精美的 Halo2.x 图册主题",
   lang: "zh",
   head: [
-    ["link", { rel: "icon", type: "image/png", href: "/logo.png" }],
+    ["link", { rel: "icon", type: "image/png", href: "/img/logo.png" }],
     ["meta", { property: "og:type", content: "website" }],
     ["meta", { property: "og:title", content: ogTitle }],
     ["meta", { property: "og:image", content: ogImage }],
@@ -36,11 +38,11 @@ export default defineConfig({
     ],
   ],
   themeConfig: {
-    // https://vitepress.dev/reference/default-theme-config
+    //导航栏配置
     nav: [
       { text: '作者博客', link: 'https://0206.ink/' },
     ],
-
+    //文章
     sidebar: [
       {
         text: '主题简介',
@@ -57,65 +59,38 @@ export default defineConfig({
       }
 
     ],
-
+    outline: {
+      level: 'deep', // 右侧大纲标题层级
+      label: '目录', // 右侧大纲标题文本配置
+    },
+    // 搜索配置
+    search: {
+      provider: "local",
+      options: localSearchOptions
+    },
+    // 导航栏右侧社交链接配置
     socialLinks: [
       { icon: 'github', link: 'https://github.com/chengzhongxue/halo-theme-timeplus' }
     ],
-    search: {
-      provider: "algolia",
-      options: {
-        appId: "Q74OQRXAR7",
-        apiKey: "eca77082cba7324afee4d6b0ed1acba7",
-        indexName: "timeplus",
-        placeholder: "搜索文档",
-        translations: {
-          button: {
-            buttonText: "搜索文档",
-            buttonAriaLabel: "搜索文档",
-          },
-          modal: {
-            searchBox: {
-              resetButtonTitle: "清除查询条件",
-              resetButtonAriaLabel: "清除查询条件",
-              cancelButtonText: "取消",
-              cancelButtonAriaLabel: "取消",
-            },
-            startScreen: {
-              recentSearchesTitle: "搜索历史",
-              noRecentSearchesText: "没有搜索历史",
-              saveRecentSearchButtonTitle: "保存至搜索历史",
-              removeRecentSearchButtonTitle: "从搜索历史中移除",
-              favoriteSearchesTitle: "收藏",
-              removeFavoriteSearchButtonTitle: "从收藏中移除",
-            },
-            errorScreen: {
-              titleText: "无法获取结果",
-              helpText: "你可能需要检查你的网络连接",
-            },
-            footer: {
-              selectText: "选择",
-              navigateText: "切换",
-              closeText: "关闭",
-              searchByText: "搜索提供者",
-            },
-            noResultsScreen: {
-              noResultsText: "无法找到相关结果",
-              suggestedQueryText: "你可以尝试查询",
-              reportMissingResultsText: "你认为该查询应该有结果？",
-              reportMissingResultsLinkText: "点击反馈",
-            },
-          },
-        },
-      },
-    },
     footer: {
       message: `Released under the MIT License. (dev)`,
       copyright: "Copyright © 2023 困困鱼",
     },
-
+    // 文档页脚文本配置
+    docFooter: {
+      prev: '上一篇',
+      next: '下一篇'
+    },
+   // 编辑链接配置
     editLink: {
       pattern: "https://github.com/chengzhongxue/halo-timeplus-editor/edit/main/:path",
-      text: "Edit this page on GitHub",
+      text: "不妥之处，敬请雅正",
+    },
+  },
+  markdown: {
+    lineNumbers: true,
+    config(md) {
+      md.use(tabsMarkdownPlugin);
     },
   },
   locales: {
