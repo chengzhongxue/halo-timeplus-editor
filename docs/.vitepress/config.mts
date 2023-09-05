@@ -1,9 +1,40 @@
 import { defineConfig } from 'vitepress'
 
+const ogDescription = "一款精美的 Halo2.x 图册主题";
+const ogImage = "https://docs.anheyu.com/cover.jpg";
+const ogTitle = "Halo-TimePlus主题";
+const ogUrl = "https://timeplus.yyds.pink";
+
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
-  title: "Halo-TimePlus",
-  description: "A VitePress Site",
+  title: "Halo-TimePlus主题官方文档",
+  description: "一款精美的 Halo2.x 图册主题",
+  lang: "zh",
+  head: [
+    ["link", { rel: "icon", type: "image/png", href: "/logo.png" }],
+    ["meta", { property: "og:type", content: "website" }],
+    ["meta", { property: "og:title", content: ogTitle }],
+    ["meta", { property: "og:image", content: ogImage }],
+    ["meta", { property: "og:url", content: ogUrl }],
+    ["meta", { property: "og:description", content: ogDescription }],
+    ["meta", { name: "twitter:card", content: "summary_large_image" }],
+    ["meta", { name: "twitter:site", content: "@kunkunyu" }],
+    ["meta", { name: "theme-color", content: "#646cff" }],
+    // 添加百度统计代码
+    [
+      "script",
+      {},
+      `
+      var _hmt = _hmt || [];
+      (function() {
+        var hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?2c60ed0407c73c3e27ef53fefbed18fa";
+        var s = document.getElementsByTagName("script")[0]; 
+        s.parentNode.insertBefore(hm, s);
+      })();
+       `,
+    ],
+  ],
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
     nav: [
